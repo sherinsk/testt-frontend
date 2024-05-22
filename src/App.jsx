@@ -25,7 +25,7 @@ function App() {
   const addStudent = async () => {
     try {
       const response = await axios.post('https://testtt-three-roan.vercel.app/students', { name, age: Number(age), mark: Number(mark) });
-      setStudents([...students, response.data]);
+      fetchStudents()
       setName('');
       setAge('');
       setMark('');
